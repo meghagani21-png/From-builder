@@ -1,0 +1,29 @@
+{
+  "name": "trpc-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "dotenv -- turbo build",
+    "db:studio": "drizzle-kit studio",
+    "dev": "dotenv -- turbo dev",
+    "db:up": "docker compose up -d",
+    "db:generate": "dotenv -- turbo db:generate",
+    "db:migrate": "dotenv -- turbo db:migrate",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0",
+    "drizzle-kit": "^0.31.10",
+    "prettier": "^3.7.4",
+    "turbo": "^2.7.2",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.2"
+  }
+}
