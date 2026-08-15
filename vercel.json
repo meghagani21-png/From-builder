@@ -1,0 +1,9 @@
+{
+  "projects": [
+    {
+      "name": "from-builder",
+      "source": "trpc-monorepo/apps/web",
+      "framework": "nextjs"
+    }
+  ]
+}
