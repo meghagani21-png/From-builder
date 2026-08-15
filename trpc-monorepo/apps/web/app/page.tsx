@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Type, Mail, ListChecks, Upload, CreditCard, CalendarClock, Sun, Moon, ArrowRight } from "lucide-react";
-import { useUser } from "~/hooks/api/auth";
+// import { useUser } from "~/hooks/api/auth";
 import { THEMES, FW_CSS } from "~/lib/fieldwork";
 
 function useReveal() {
@@ -43,7 +43,7 @@ const FIELD_TYPES = [
 export default function HomePage() {
   const [mode, setMode]           = useState<"dark" | "light">("dark");
   const [showModal, setShowModal] = useState(false);
-  const { user }                  = useUser();
+  const user                      = null; // Temporarily set to null
   const searchParams              = useSearchParams();
   const t                         = THEMES[mode];
 
