@@ -325,7 +325,7 @@ export default function DashboardForms() {
                             { icon: <TrendingUp size={18} />, label: "Total Forms", value: forms?.length || 0 },
                             { icon: <Users size={18} />, label: "Total Responses", value: forms?.reduce((sum: number, f: any) => sum + (f.responseCount || 0), 0) || 0 },
                             { icon: <Clock size={18} />, label: "Active Forms", value: forms?.filter((f: any) => (f.responseCount || 0) > 0).length || 0 },
-                        ].map((stat, i) => (
+                        ].map((stat: any, i: number) => (
                             <div
                                 key={i}
                                 style={{
@@ -351,7 +351,7 @@ export default function DashboardForms() {
                 {/* FORMS GRID */}
                 {isLoading ? (
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20 }}>
-                        {Array.from({ length: 6 }).map((_, i) => (
+                        {Array.from({ length: 6 }).map((_: any, i: number) => (
                             <div
                                 key={i}
                                 style={{
