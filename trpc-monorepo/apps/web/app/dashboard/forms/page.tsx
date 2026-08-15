@@ -323,7 +323,7 @@ export default function DashboardForms() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 18 }}>
                         {[
                             { icon: <TrendingUp size={18} />, label: "Total Forms", value: forms?.length || 0 },
-                            { icon: <Users size={18} />, label: "Total Responses", value: forms?.reduce((sum, f) => sum + (f.responseCount || 0), 0) || 0 },
+                            { icon: <Users size={18} />, label: "Total Responses", value: forms?.reduce((sum: number, f) => sum + (f.responseCount || 0), 0) || 0 },
                             { icon: <Clock size={18} />, label: "Active Forms", value: forms?.filter(f => (f.responseCount || 0) > 0).length || 0 },
                         ].map((stat, i) => (
                             <div
