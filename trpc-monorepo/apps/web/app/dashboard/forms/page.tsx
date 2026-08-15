@@ -405,7 +405,7 @@ export default function DashboardForms() {
                     </div>
                 ) : (
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20 }}>
-                        {forms.map((form, index) => {
+                        {(forms as any[]).map((form, index) => {
                             const rot = [-0.7, 0.5, -0.3, 0.6, -0.5, 0.4, -0.4, 0.3][index % 8];
                             return (
                                 <div
